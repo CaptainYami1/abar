@@ -1,5 +1,4 @@
 import { motion, type Variants } from 'framer-motion'
-import { Navbar } from './Navbar'
 import { FeatureTicker } from './FeatureTicker'
 import { EASE_OUT } from '../../lib/motion'
 
@@ -96,8 +95,6 @@ export function HeroSection() {
       />
 
       <div className="relative z-1 mx-auto flex w-full max-w-[1200px] flex-1 flex-col px-6 pt-28  max-[900px]:px-6 max-[900px]:pt-24 max-[900px]:pb-12 lg:px-12">
-        <Navbar />
-
         <div className="mx-auto flex max-w-[820px] flex-1 flex-col items-center justify-center px-0 py-12 pt-12 pb-8 text-center max-[540px]:pt-8">
           <h1 className="mb-8 flex flex-col items-center leading-[1.05]">
             <motion.span

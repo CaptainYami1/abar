@@ -92,7 +92,7 @@ export function TestimonialsSection() {
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
-        transition={{ duration: 0.7, ease: EASE_OUT }}
+        transition={{ duration: 0.5, ease: EASE_OUT }}
       >
         <div className="grid grid-cols-1 items-center gap-10 min-[960px]:grid-cols-2 min-[960px]:gap-8">
           <div className="max-[959px]:text-center">

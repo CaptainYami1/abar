@@ -35,7 +35,7 @@ function TickerContent() {
 export function FeatureTicker() {
   return (
     <div
-      className="relative  w-full overflow-hidden border-y border-[#CD9F3F] bg-[#CD9F3F21] py-8 mt-10 before:pointer-events-none before:absolute before:top-0 before:bottom-0 before:left-0 before:z-1 before:w-20 before:bg-gradient-to-r before:from-cream before:to-transparent before:content-[''] after:pointer-events-none after:absolute after:top-0 after:right-0 after:bottom-0 after:z-1 after:w-20 after:bg-gradient-to-l after:from-cream after:to-transparent after:content-['']"
+      className="relative  w-full overflow-hidden border-y border-[#CD9F3F] bg-[#CD9F3F21] py-4 mt-10 before:pointer-events-none before:absolute before:top-0 before:bottom-0 before:left-0 before:z-1 before:w-20 before:bg-gradient-to-r before:from-cream before:to-transparent before:content-[''] after:pointer-events-none after:absolute after:top-0 after:right-0 after:bottom-0 after:z-1 after:w-20 after:bg-gradient-to-l after:from-cream after:to-transparent after:content-['']"
       aria-label="Product features"
     >
       <div className="flex w-max animate-marquee">

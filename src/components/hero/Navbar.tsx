@@ -1,9 +1,17 @@
 import { AnimatePresence, motion, type Variants } from 'framer-motion'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { EASE_OUT } from '../../lib/motion'
 import { BrandWordmark } from '../common/BrandWordmark'
 
-const navLinks = ['About', 'Contact', 'Products', 'Support']
+const MotionLink = motion.create(Link)
+
+const navLinks = [
+  { label: 'About', to: '/about' },
+  { label: 'Contact', to: '/contact' },
+  { label: 'Products', to: '/#products' },
+  { label: 'Support', to: '/support' },
+]
 
 const navContainer: Variants = {
   hidden: { opacity: 0, y: -28 },
@@ -47,28 +55,28 @@ export function Navbar() {
       variants={navContainer}
     >
       <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-6 px-6 py-4 lg:px-12">
-        <motion.a
-          href="#"
+        <MotionLink
+          to="/"
           className="text-[1.35rem] font-bold tracking-[-0.02em] text-navy transition-opacity duration-250 hover:opacity-75"
           variants={navItem}
           aria-label="abar home"
         >
           <BrandWordmark dotClassName="ml-px mb-0.5 h-[7px] w-[7px]" pulse />
-        </motion.a>
+        </MotionLink>
 
         <nav
           className="hidden items-center gap-9 min-[900px]:flex"
           aria-label="Main navigation"
         >
           {navLinks.map((link) => (
-            <motion.a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+            <MotionLink
+              key={link.label}
+              to={link.to}
               className={navLinkClass}
               variants={navItem}
             >
-              {link}
-            </motion.a>
+              {link.label}
+            </MotionLink>
           ))}
         </nav>
 
@@ -129,14 +137,14 @@ export function Navbar() {
               aria-label="Mobile navigation"
             >
               {navLinks.map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+                <Link
+                  key={link.label}
+                  to={link.to}
                   className="rounded-lg px-2 py-3 text-[0.95rem] font-medium text-navy transition-colors duration-250 hover:bg-black/5 hover:text-gold"
                   onClick={closeMenu}
                 >
-                  {link}
-                </a>
+                  {link.label}
+                </Link>
               ))}
               <a
                 href="#login"

@@ -1,10 +1,25 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { EASE_OUT } from '../../lib/motion'
 import { BrandWordmark } from '../common/BrandWordmark'
 import { PhoneFrame } from '../common/PhoneFrame'
 
-const footerNav = ['About Equinorth', 'Careers', 'Press', 'Contact']
-const legalLinks = ['Terms of use', 'Privacy policy']
+interface FooterLink {
+  label: string
+  to?: string
+  href?: string
+}
+
+const footerNav: FooterLink[] = [
+  { label: 'About Equinorth', to: '/about' },
+  { label: 'Careers', href: '#careers' },
+  { label: 'Press', href: '#press' },
+  { label: 'Contact', to: '/contact' },
+]
+const legalLinks: FooterLink[] = [
+  { label: 'Terms of use', href: '#terms' },
+  { label: 'Privacy policy', to: '/privacy' },
+]
 
 function AppStoreBadge() {
   return (
@@ -123,8 +138,8 @@ export function CtaFooterSection() {
         <div className="relative pt-7 pb-8">
           <div className="flex flex-col gap-6 pb-6 md:flex-row md:items-start md:justify-between md:gap-8">
             <div>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="mb-[0.45rem] inline-block no-underline"
                 aria-label="abar home"
               >
@@ -132,22 +147,32 @@ export function CtaFooterSection() {
                   className="text-[1.85rem] font-extrabold tracking-[-0.02em] text-navy"
                   dotClassName="ml-px h-1.5 w-1.5"
                 />
-              </a>
+              </Link>
               <p className="m-0 text-[0.82rem] leading-[1.5] ">
                 Save, transfer, and easy credit by Equinorth Capital Ltd
               </p>
             </div>
 
             <nav className="flex flex-wrap gap-x-6 gap-y-4" aria-label="Footer navigation">
-              {footerNav.map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-[0.88rem] font-medium text-grey no-underline transition-colors duration-250 hover:text-navy"
-                >
-                  {link}
-                </a>
-              ))}
+              {footerNav.map((link) =>
+                link.to ? (
+                  <Link
+                    key={link.label}
+                    to={link.to}
+                    className="text-[0.88rem] font-medium text-grey no-underline transition-colors duration-250 hover:text-navy"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-[0.88rem] font-medium text-grey no-underline transition-colors duration-250 hover:text-navy"
+                  >
+                    {link.label}
+                  </a>
+                ),
+              )}
             </nav>
           </div>
 
@@ -159,15 +184,25 @@ export function CtaFooterSection() {
               abar is a product of Equinorth Capital Ltd
             </span>
             <div className="flex gap-5">
-              {legalLinks.map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-[rgba(90,100,120,0.85)] no-underline transition-colors duration-250 hover:text-navy"
-                >
-                  {link}
-                </a>
-              ))}
+              {legalLinks.map((link) =>
+                link.to ? (
+                  <Link
+                    key={link.label}
+                    to={link.to}
+                    className="text-[rgba(90,100,120,0.85)] no-underline transition-colors duration-250 hover:text-navy"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-[rgba(90,100,120,0.85)] no-underline transition-colors duration-250 hover:text-navy"
+                  >
+                    {link.label}
+                  </a>
+                ),
+              )}
             </div>
           </div>
         </div>
