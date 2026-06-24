@@ -189,7 +189,7 @@ export function WhoAbarIsForSection() {
                 Who Abar is For?
               </motion.h2>
               <motion.p
-                className="m-0  font-inter text-[24px] font-normal leading-none tracking-normal text-center text-[#182B49] mb-8"
+                className="m-0  font-inter text-[20px] font-normal leading-none tracking-normal text-center text-[#182B49] mb-8"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-40px' }}
