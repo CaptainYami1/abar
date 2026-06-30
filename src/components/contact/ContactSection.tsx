@@ -79,7 +79,7 @@ const inputClass =
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (event:any) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     setSubmitted(true)
   }
