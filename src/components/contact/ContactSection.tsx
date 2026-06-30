@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
-import { useState, type FormEvent, type ReactNode } from 'react'
+import { useState,type ReactNode } from 'react'
 import { EASE_OUT } from '../../lib/motion'
-import { SectionEyebrow } from '../common/SectionEyebrow'
 
 interface Channel {
   id: string
@@ -80,13 +79,13 @@ const inputClass =
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event:any) => {
     event.preventDefault()
     setSubmitted(true)
   }
 
   return (
-    <section className="bg-cream py-16 sm:py-20 lg:py-24" id="contact" aria-labelledby="contact-heading">
+    <section className="bg-cream py-16 sm:py-20 " id="contact" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-[1100px] px-6 lg:px-12">
         <motion.div
           className="mb-12 text-center"
@@ -95,9 +94,6 @@ export function ContactSection() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7, ease: EASE_OUT }}
         >
-          <SectionEyebrow tone="gold" pulse className="justify-center">
-            GET IN TOUCH
-          </SectionEyebrow>
           <h1
             id="contact-heading"
             className="mb-4 text-[clamp(1.95rem,4.5vw,2.85rem)] leading-[1.12] font-extrabold tracking-[-0.03em] text-navy"

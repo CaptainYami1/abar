@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { EASE_OUT } from '../../lib/motion'
-import { SectionEyebrow } from '../common/SectionEyebrow'
 
 const highlights = [
   'One account',
@@ -20,9 +19,6 @@ export function AboutSection() {
   return (
     <section className="bg-cream py-16 sm:py-20 lg:py-24" id="about" aria-labelledby="about-heading">
       <div className="mx-auto max-w-[900px] px-6 lg:px-12">
-        <SectionEyebrow tone="gold" pulse>
-          ABOUT ABAR
-        </SectionEyebrow>
 
         <motion.h1
           id="about-heading"

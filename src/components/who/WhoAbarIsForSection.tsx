@@ -176,7 +176,7 @@ export function WhoAbarIsForSection() {
         transition={{ duration: 0.7, ease: EASE_OUT }}
       >
         <div className="">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7  md:gap-20 mb-7 md:mb-0">
+          <div className="grid grid-cols-1 md:grid-cols-3   md:gap-20 mb-7 md:mb-0">
             <header className="pt-2 text-center col-span-2 max-w-[530px]">
               <motion.h2
                 id="who-heading"

@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { EASE_OUT } from '../../lib/motion'
-import { SectionEyebrow } from '../common/SectionEyebrow'
 
 interface Faq {
   question: string
@@ -172,7 +171,7 @@ export function SupportSection() {
   const [openKey, setOpenKey] = useState<string | null>('0-0')
 
   return (
-    <section className="bg-cream py-16 sm:py-20 lg:py-24" id="support" aria-labelledby="support-heading">
+    <section className="bg-cream py-16 sm:py-20" id="support" aria-labelledby="support-heading">
       <div className="mx-auto max-w-[820px] px-6 lg:px-12">
         <motion.div
           className="mb-12 text-center"
@@ -181,9 +180,7 @@ export function SupportSection() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7, ease: EASE_OUT }}
         >
-          <SectionEyebrow tone="gold" pulse className="justify-center">
-            HELP &amp; SUPPORT
-          </SectionEyebrow>
+         
           <h1
             id="support-heading"
             className="mb-4 text-[clamp(1.95rem,4.5vw,2.85rem)] leading-[1.12] font-extrabold tracking-[-0.03em] text-navy"
