@@ -1,9 +1,9 @@
 import { motion, type Variants } from 'framer-motion'
 import { EASE_OUT } from '../../lib/motion'
 import img1 from "../../assets/sALARIED1.png"
-import img2 from "../../assets/Soletraders1.png"
+import img2 from "../../assets/businessOwner.png"
 import img3 from "../../assets/Individual savers1.png"
-import img4 from "../../assets/Groupsave1.png"
+import img4 from "../../assets/ajoGroup.png"
 
 const headerReveal: Variants = {
   

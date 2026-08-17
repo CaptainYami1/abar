@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState,type ReactNode } from 'react'
+import { useState, type FormEvent, type ReactNode } from 'react'
 import { EASE_OUT } from '../../lib/motion'
 
 interface Channel {
@@ -79,7 +79,7 @@ const inputClass =
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setSubmitted(true)
   }

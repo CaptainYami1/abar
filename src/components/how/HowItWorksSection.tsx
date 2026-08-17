@@ -37,7 +37,7 @@ const steps = [
     id: 4,
     title: 'Step 4- Start using abar',
     description:
-      'Your Providus-powered virtual account number is assigned immediately. Fund your wallet and start saving, sending, or applying for credit.',
+      'Your account number is assigned immediately. Fund your Abar wallet and start saving, sending, or applying for credit.',
     accent: true,
   },
 ]
@@ -70,7 +70,7 @@ export function HowItWorksSection() {
               >
                 <h3
                   className={`mb-[0.55rem] text-[clamp(1rem,1.8vw,1.12rem)] leading-[1.35] font-bold ${
-                    step.accent ? 'text-gold' : 'text-white'
+                    step.accent ? 'text-[#FFAD08]' : 'text-white'
                   }`}
                 >
                   {step.title}
