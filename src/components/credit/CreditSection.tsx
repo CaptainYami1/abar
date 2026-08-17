@@ -1,7 +1,7 @@
 import { motion, type Variants } from 'framer-motion'
 import { EASE_OUT, fadeUp, staggerContainer } from '../../lib/motion'
 import { SectionEyebrow } from '../common/SectionEyebrow'
-import noBorrow from "../../assets/nooBorrow.png"
+import noBorrow from "../../assets/noHiddenCharge.png"
 import repay from "../../assets/repay.png"
 import disburse from "../../assets/disburse.png"
 
