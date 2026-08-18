@@ -9,7 +9,7 @@ const MotionLink = motion.create(Link)
 const navLinks = [
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
-  { label: 'Products', to: '/#products' },
+  { label: 'Products', to: '/product' },
   { label: 'Support', to: '/support' },
 ]
 

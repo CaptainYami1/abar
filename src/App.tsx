@@ -6,6 +6,7 @@ import { AboutPage } from './pages/AboutPage'
 import { SupportPage } from './pages/SupportPage'
 import { ContactPage } from './pages/ContactPage'
 import { PrivacyPage } from './pages/PrivacyPage'
+import { ProductsPage } from './pages/ProductsPage'
 
 function ScrollManager() {
   const { pathname, hash } = useLocation()
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/product" element={<ProductsPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
